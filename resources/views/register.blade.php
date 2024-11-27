@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="registration.php" method="POST">
+    <form action="" method="POST">
         Name: <input name="name" type="text" required><br/><br/>
         Email: <input name="email" type="text" required><br/><br/>
         Password: <input name="password" type="password" required><br/><br/>
