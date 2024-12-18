@@ -26,6 +26,7 @@ $request->validate([
 'email' => 'required|email',
 'password' => 'required',
 ]);
+
 $credentials = $request->only('email', 'password');
 if (Auth::attempt($credentials))
 {
@@ -56,5 +57,10 @@ else
 return redirect(route('register'))->with('error', 'Failed to create
 user');
 }
+}
+public function logout()
+{
+Auth::logout();
+return redirect('login');
 }
 }
