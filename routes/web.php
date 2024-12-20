@@ -6,6 +6,9 @@ use App\Http\Controllers\HelloSidduController;
 use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\ProductsManager;
+use App\Http\Controllers\CategoriesManager;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +27,6 @@ Route::post('login', 'App\Http\Controllers\AuthManager@loginPost')->name('login.
 Route::post('register', 'App\Http\Controllers\AuthManager@registerPost')->name('register.post');
 Route::get('/home', [Home::class, 'index'])->name('home');
 Route::get('logout', [App\Http\Controllers\AuthManager::class, 'logout'])->name('logout');
+Route::get('/products', [App\Http\Controllers\ProductsManager::class, 'products'])->name('products');
+Route::get('/categories', [App\Http\Controllers\CategoriesManager::class, 'categories'])->name('categories');
+
